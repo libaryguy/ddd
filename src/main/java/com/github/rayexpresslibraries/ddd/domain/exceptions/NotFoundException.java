@@ -2,7 +2,8 @@ package com.github.rayexpresslibraries.ddd.domain.exceptions;
 
 import com.github.rayexpresslibraries.ddd.domain.AggregateRoot;
 import com.github.rayexpresslibraries.ddd.domain.Identifier;
-import com.github.libaryguy.ddd.domain.validation.Error;
+import com.github.rayexpresslibraries.ddd.domain.validation.Error;
+
 
 import java.util.Collections;
 import java.util.List;

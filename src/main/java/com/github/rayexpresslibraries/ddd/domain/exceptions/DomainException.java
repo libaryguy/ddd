@@ -1,6 +1,6 @@
 package com.github.rayexpresslibraries.ddd.domain.exceptions;
 
-import com.github.libaryguy.ddd.domain.validation.Error;
+import com.github.rayexpresslibraries.ddd.domain.validation.Error;
 
 import java.util.List;
 import java.util.Optional;
