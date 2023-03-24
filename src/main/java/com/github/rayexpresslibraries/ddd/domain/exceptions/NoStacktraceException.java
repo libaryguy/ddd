@@ -1,4 +1,4 @@
-package com.github.libaryguy.ddd.domain.exceptions;
+package com.github.rayexpresslibraries.ddd.domain.exceptions;
 
 public class NoStacktraceException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package com.github.libaryguy.ddd.domain;
+package com.github.rayexpresslibraries.ddd.domain;
 
 public abstract class AggregateRoot<ID extends Identifier> extends Entity<ID> {
 

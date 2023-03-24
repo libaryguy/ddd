@@ -1,7 +1,7 @@
-package com.github.libaryguy.ddd.domain.exceptions;
+package com.github.rayexpresslibraries.ddd.domain.exceptions;
 
 
-import com.github.libaryguy.ddd.domain.validation.handler.Notification;
+import com.github.rayexpresslibraries.ddd.domain.validation.handler.Notification;
 
 public class NotificationException extends DomainException {
 

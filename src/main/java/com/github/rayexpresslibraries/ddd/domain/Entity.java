@@ -1,8 +1,8 @@
-package com.github.libaryguy.ddd.domain;
+package com.github.rayexpresslibraries.ddd.domain;
 
 
 
-import com.github.libaryguy.ddd.domain.validation.ValidatorHandler;
+import com.github.rayexpresslibraries.ddd.domain.validation.ValidatorHandler;
 
 import java.util.Objects;
 

@@ -1,4 +1,4 @@
-package com.github.libaryguy.ddd.application;
+package com.github.rayexpresslibraries.ddd.application;
 
 public abstract class UnitUseCase<IN> {
 

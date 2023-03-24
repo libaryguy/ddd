@@ -1,10 +1,10 @@
-package com.github.libaryguy.ddd.domain.validation.handler;
+package com.github.rayexpresslibraries.ddd.domain.validation.handler;
 
 
 
 import com.github.libaryguy.ddd.domain.validation.Error;
-import com.github.libaryguy.ddd.domain.validation.ValidatorHandler;
-import com.github.libaryguy.ddd.domain.exceptions.DomainException;
+import com.github.rayexpresslibraries.ddd.domain.validation.ValidatorHandler;
+import com.github.rayexpresslibraries.ddd.domain.exceptions.DomainException;
 
 import java.util.ArrayList;
 import java.util.List;

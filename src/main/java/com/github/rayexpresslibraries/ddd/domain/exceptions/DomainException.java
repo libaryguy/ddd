@@ -1,4 +1,4 @@
-package com.github.libaryguy.ddd.domain.exceptions;
+package com.github.rayexpresslibraries.ddd.domain.exceptions;
 
 import com.github.libaryguy.ddd.domain.validation.Error;
 

@@ -1,4 +1,4 @@
-package com.github.libaryguy.ddd.domain.validation;
+package com.github.rayexpresslibraries.ddd.domain.validation;
 
 public abstract class Validator {
 
