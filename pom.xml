@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.libaryguy</groupId>
+    <groupId>io.github.libaryguy</groupId>
     <artifactId>ddd</artifactId>
     <version>1.0</version>
 
