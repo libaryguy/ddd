@@ -1,6 +1,5 @@
 package com.github.rayexpresslibraries.ddd.domain.validation.handler;
 
-
 import com.github.rayexpresslibraries.ddd.domain.validation.Error;
 import com.github.rayexpresslibraries.ddd.domain.validation.ValidatorHandler;
 import com.github.rayexpresslibraries.ddd.domain.exceptions.DomainException;
