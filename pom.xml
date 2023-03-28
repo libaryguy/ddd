@@ -6,7 +6,7 @@
 
     <groupId>io.github.rayexpress-libraries</groupId>
     <artifactId>ddd</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>jar</packaging>
 
 
@@ -35,7 +35,7 @@
     <developers>
         <developer>
             <name>Rayllanderson Rodrigues</name>
-            <email>rayllanderson@gmail.com</email>
+            <email>email@gmail.com</email>
             <organizationUrl>https://github.com/rayexpress-libraries</organizationUrl>
         </developer>
     </developers>
@@ -51,6 +51,21 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>5.2.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.9.2</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <profiles>
         <profile>
