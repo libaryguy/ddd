@@ -33,11 +33,7 @@ public abstract class Entity<ID extends Identifier> {
         return Collections.unmodifiableList(domainEvents);
     }
 
-    public void publishDomainEvents(final EventPublisher publisher) {
-        if (publisher == null) return;
-
-        getDomainEvents().forEach(publisher::publishEvent);
-
+    public void clearDomainEvents() {
         this.domainEvents.clear();
     }
 
