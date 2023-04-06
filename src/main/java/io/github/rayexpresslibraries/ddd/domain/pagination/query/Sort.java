@@ -18,12 +18,12 @@ public class Sort {
     }
 
     private static Sort by(final String[] sort, Property aProperty) {
+        final String property = aProperty.getDomainProperty(sort[0]);
         try {
-            final String property = sort[0];
             final String direction = sort[1];
-            return new Sort(aProperty.getDomainProperty(property), Direction.valueOf(direction.toUpperCase()));
+            return new Sort(property, Direction.valueOf(direction.toUpperCase()));
         } catch (Exception e) {
-            return Sort.unsorted();
+            return new Sort(property, defaultDirection());
         }
     }
 
