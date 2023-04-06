@@ -18,13 +18,12 @@ public class Sort {
     }
 
     private static Sort by(final String[] sort, Property aProperty) {
-        if (sort == null || sort.length == 0) return Sort.unsorted();
-        final String property = sort[0];
         try {
+            final String property = sort[0];
             final String direction = sort[1];
             return new Sort(aProperty.getDomainProperty(property), Direction.valueOf(direction.toUpperCase()));
-        } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException e) {
-            return new Sort(property, defaultDirection());
+        } catch (Exception e) {
+            return Sort.unsorted();
         }
     }
 
@@ -37,7 +36,7 @@ public class Sort {
         try {
             return Sort.by(sort, sortProperty.getDeclaredConstructor().newInstance());
         } catch (Exception e) {
-            return new Sort("", defaultDirection());
+            return Sort.unsorted();
         }
     }
 
@@ -45,19 +44,19 @@ public class Sort {
         try {
             return Sort.by(new String[]{property, direction.name()}, sortProperty.getDeclaredConstructor().newInstance());
         } catch (Exception e) {
-            return new Sort("", defaultDirection());
+            return Sort.unsorted();
         }
     }
 
     /**
-     * @param direction see algo {@link Direction}
+     * @param direction    see algo {@link Direction}
      * @param sortProperty see algo {@link Property}
      */
     public static Sort by(final String property, final String direction, final Class<? extends Property> sortProperty) {
         try {
             return Sort.by(new String[]{property, direction}, sortProperty.getDeclaredConstructor().newInstance());
         } catch (Exception e) {
-            return new Sort("", defaultDirection());
+            return Sort.unsorted();
         }
     }
 
