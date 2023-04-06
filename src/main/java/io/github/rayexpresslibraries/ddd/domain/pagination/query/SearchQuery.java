@@ -8,6 +8,11 @@ public record SearchQuery(
         Search search,
         Sort sort
 ) {
+
+    public static SearchQuery from(int currentPage, int size, String[] search, String[] sort, Class<? extends Property> propertyClass) {
+        return new SearchQuery(currentPage, size, Search.by(search, propertyClass), Sort.by(sort, propertyClass));
+    }
+
     public String sortDirection() {
         return Optional.ofNullable(sort)
                 .map(Sort::direction)

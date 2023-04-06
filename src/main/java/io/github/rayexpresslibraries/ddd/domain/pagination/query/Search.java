@@ -18,7 +18,7 @@ public class Search {
             final String value = sort[1];
             return new Search(aProperty.getDomainProperty(property), value);
         } catch (Exception e) {
-            return Search.unsarched();
+            return Search.empty();
         }
     }
 
@@ -31,11 +31,11 @@ public class Search {
         try {
             return Search.by(search, property.getDeclaredConstructor().newInstance());
         } catch (Exception e) {
-            return Search.unsarched();
+            return Search.empty();
         }
     }
 
-    public static Search unsarched() {
+    public static Search empty() {
         return new Search(null, null);
     }
 
