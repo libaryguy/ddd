@@ -26,11 +26,7 @@ public class Search {
         return new Search(attributeName, attributeValue);
     }
 
-    /**
-     * @param search '[0] - property field' e '[1] - value of search'
-     * <br>
-     * example: ([0] = name, [1] = kaguya) will result in search.attributeName = name & search.attributeValue = kaguya
-     */
+
     public static Search by(final String[] search, Class<? extends Property> property) {
         try {
             return Search.by(search, property.getDeclaredConstructor().newInstance());
