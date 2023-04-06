@@ -50,8 +50,8 @@ public class Sort {
     }
 
     /**
-     * @param direction @see {@link Direction}
-     * @param sortProperty @see {@link SortProperty}
+     * @param direction see algo {@link Direction}
+     * @param sortProperty see algo {@link SortProperty}
      */
     public static Sort by(final String property, final String direction, final Class<? extends SortProperty> sortProperty) {
         try {
