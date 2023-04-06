@@ -17,12 +17,12 @@ public class Sort {
         return this.direction;
     }
 
-    private static Sort by(final String[] sort, SortProperty aSortProperty) {
+    private static Sort by(final String[] sort, Property aProperty) {
         if (sort == null || sort.length == 0) return Sort.unsorted();
         final String property = sort[0];
         try {
             final String direction = sort[1];
-            return new Sort(aSortProperty.getDomainProperty(property), Direction.valueOf(direction.toUpperCase()));
+            return new Sort(aProperty.getDomainProperty(property), Direction.valueOf(direction.toUpperCase()));
         } catch (ArrayIndexOutOfBoundsException | IllegalArgumentException e) {
             return new Sort(property, defaultDirection());
         }
@@ -31,9 +31,9 @@ public class Sort {
     /**
      * @param sort '[0] - property' e '[1] - direction'
      * - Direction - {@link Direction}
-     * - Property - {@link SortProperty}
+     * - Property - {@link Property}
      */
-    public static Sort by(final String[] sort, Class<? extends SortProperty> sortProperty) {
+    public static Sort by(final String[] sort, Class<? extends Property> sortProperty) {
         try {
             return Sort.by(sort, sortProperty.getDeclaredConstructor().newInstance());
         } catch (Exception e) {
@@ -41,7 +41,7 @@ public class Sort {
         }
     }
 
-    public static Sort by(final String property, final Direction direction, final Class<? extends SortProperty> sortProperty) {
+    public static Sort by(final String property, final Direction direction, final Class<? extends Property> sortProperty) {
         try {
             return Sort.by(new String[]{property, direction.name()}, sortProperty.getDeclaredConstructor().newInstance());
         } catch (Exception e) {
@@ -51,9 +51,9 @@ public class Sort {
 
     /**
      * @param direction see algo {@link Direction}
-     * @param sortProperty see algo {@link SortProperty}
+     * @param sortProperty see algo {@link Property}
      */
-    public static Sort by(final String property, final String direction, final Class<? extends SortProperty> sortProperty) {
+    public static Sort by(final String property, final String direction, final Class<? extends Property> sortProperty) {
         try {
             return Sort.by(new String[]{property, direction}, sortProperty.getDeclaredConstructor().newInstance());
         } catch (Exception e) {

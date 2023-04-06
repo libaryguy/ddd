@@ -1,17 +1,17 @@
 package io.github.rayexpresslibraries.ddd.domain.pagination.query;
 
 /**
- * example use of {@link SortProperty}
+ * example use of {@link Property}
  */
-class CategorySortProperty extends SortProperty {
+class CategoryProperty extends Property {
 
     /**
-     * Domain property that can use for Sort.
+     * Domain property that can use for Sort/search.
      * Limiting them
      */
     private static final String[] properties = {"name", "status"};
 
-    public CategorySortProperty() {
+    public CategoryProperty() {
         super(properties);
     }
 
