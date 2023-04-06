@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Domain properties that should be used for Sort.
  * Without this, anyone can access your domain property outside.
  * So you must limit what people can use for sort there.
- * See an exemple of usage here {@link io.github.rayexpresslibraries.ddd.domain.pagination.query.CategorySortProperty}
+ * See an exemple of usage here {@link CategorySortProperty}
  */
 public abstract class SortProperty {
 
